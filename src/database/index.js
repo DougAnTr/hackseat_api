@@ -8,6 +8,7 @@ import PostDifficultyLevel from "../app/models/PostDifficultyLevel";
 import Post from "../app/models/Post";
 import PostRating from "../app/models/PostRating";
 import PostExercise from "../app/models/PostExercise";
+import ExerciseOption from "../app/models/ExerciseOption";
 
 const models = [
   UserType,
@@ -16,7 +17,8 @@ const models = [
   PostDifficultyLevel,
   Post,
   PostRating,
-  PostExercise
+  PostExercise,
+  ExerciseOption
 ];
 
 class Database {

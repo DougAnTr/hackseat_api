@@ -19,12 +19,12 @@ class Post extends Model {
   static associate(models) {
     this.belongsTo(models.User, { foreignKey: "author", as: "post_author" });
     this.belongsTo(models.PostCategory, {
-      foreignKey: "post_category",
-      as: "category"
+      foreignKey: "category",
+      as: "post_category"
     });
     this.belongsTo(models.PostDifficultyLevel, {
-      foreignKey: "post_difficulty",
-      as: "difficulty"
+      foreignKey: "difficulty",
+      as: "post_difficulty"
     });
   }
 }

@@ -1,15 +1,15 @@
 import Sequelize, { Model } from "sequelize";
 
-class PostExercise extends Model {
+class ExerciseOption extends Model {
   static init(sequelize) {
     super.init(
       {
         text: Sequelize.STRING,
-        correct_value: Sequelize.STRING
+        correct: Sequelize.BOOLEAN
       },
       {
         sequelize,
-        tableName: "post_exercises"
+        tableName: "exercise_options"
       }
     );
 
@@ -17,8 +17,8 @@ class PostExercise extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Post, { foreignKey: "post", as: "post_exercises" });
+    this.belongsTo(models.PostExercise, { foreignKey: "exercise" });
   }
 }
 
-export default PostExercise;
+export default ExerciseOption;
